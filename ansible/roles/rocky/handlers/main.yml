@@ -1,3 +1,8 @@
 #SPDX-License-Identifier: MIT-0
 ---
 # handlers file for rocky
+
+- name: Restart Redis
+  ansible.builtin.service:
+    name: redis
+    state: restarted
