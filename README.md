@@ -39,6 +39,8 @@ Using these commands we initialize terraform at the location where our terraform
 
 ## Creating Roles
 
+Run the following commands to create a scaffolding file structure for the 2 roles used:
+
 ```bash
 ansible-galaxy role init rocky
 ```
