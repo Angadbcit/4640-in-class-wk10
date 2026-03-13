@@ -52,3 +52,5 @@ Run the following commands to create a scaffolding file structure for the 2 role
    ```bash
     ansible-galaxy role init debian
    ```
+
+## Running the playbook and roles
