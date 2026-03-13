@@ -1,4 +1,4 @@
 #SPDX-License-Identifier: MIT-0
 ---
 # vars file for debian
-ansible_user: 'server_role_redis_server'
+ansible_user: 'admin'
