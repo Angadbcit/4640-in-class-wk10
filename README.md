@@ -26,3 +26,13 @@ This will add the newly created key to our logged in aws account.
 ```
 
 This removes the key from our aws account, as it is no longer needed.
+
+## terraform commands
+
+```bash
+cd terraform/
+terraform init
+terraform apply
+```
+
+Using these commands we initialize terraform at the location where our terraform configuration (main.tf) is present. `Apply` allows us to create the ec2 instances as configured in our terraform file.
