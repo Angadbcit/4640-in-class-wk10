@@ -3,6 +3,10 @@
 # tasks file for debian
 
     # Tasks for Frontend Servers
+- name: Update and upgrade apt packages
+  apt:
+    update_cache: yes
+    upgrade: yes
 - name: Install nginx on Debian
   ansible.builtin.apt:
     name: nginx
