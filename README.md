@@ -66,3 +66,7 @@ ansible-playbook playbook.yml
 ```
 
 Once satisfied, run the playbook with this command and it will execute the set configuration.
+
+## rendered html page
+
+![HTML page](sc/html.png)
