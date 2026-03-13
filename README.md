@@ -54,3 +54,15 @@ Run the following commands to create a scaffolding file structure for the 2 role
    ```
 
 ## Running the playbook and roles
+
+```bash
+ansible-playbook --check playbook.yml
+```
+
+After completeing the laybook, run this to trouleshoot any issues with the current setup. It allows dry runs to verify the config.
+
+```bash
+ansible-playbook playbook.yml
+```
+
+Once satisfied, run the playbook with this command and it will execute the set configuration.
