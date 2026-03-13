@@ -1,7 +1,7 @@
 #SPDX-License-Identifier: MIT-0
 ---
 # tasks file for debian
-# Create index.html using a template
+
     # Tasks for Frontend Servers
 - name: Install nginx on Debian
   ansible.builtin.apt:
@@ -9,6 +9,7 @@
     state: present
     update_cache: yes
   when: "'server_role_frontend_server' in group_names and ansible_facts['distribution'] == 'Debian'"
+  # Create index.html using a template
 - name: create index.html
   ansible.builtin.template:
     src: index.html.j2 # Ensure you have the file "index.html.j2" in your templates directory
