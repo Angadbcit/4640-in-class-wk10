@@ -4,7 +4,7 @@
   become: true
   gather_facts: yes # Collect facts only once for the entire play
   vars:
-    ansible_user: "{{ 'rocky' if 'server_role_redis_server' in group_names else 'admin' }}"
+    ansible_user: "rocky"
   roles:
     - rocky
 - name: Setup Frontend Servers
@@ -12,6 +12,8 @@
     - server_role_frontend_server
   become: true
   gather_facts: yes # Collect facts only once for the entire play
+  vars:
+    ansible_user: "admin"
   roles:
     - debian
 
