@@ -36,3 +36,13 @@ terraform apply
 ```
 
 Using these commands we initialize terraform at the location where our terraform configuration (main.tf) is present. `Apply` allows us to create the ec2 instances as configured in our terraform file.
+
+## Creating Roles
+
+```bash
+ansible-galaxy role init rocky
+```
+
+```bash
+ansible-galaxy role init debian
+```
