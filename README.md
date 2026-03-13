@@ -41,10 +41,14 @@ Using these commands we initialize terraform at the location where our terraform
 
 Run the following commands to create a scaffolding file structure for the 2 roles used:
 
-```bash
-ansible-galaxy role init rocky
-```
+1. This role will handle tasks related to our backend, Redis. This simply involves installing and starting up redis.
 
-```bash
-ansible-galaxy role init debian
-```
+   ```bash
+    ansible-galaxy role init rocky
+   ```
+
+2. This role will manage the frontend, nginx setup. This involves installing nginx, creating and moving required files to their locations, and starting up the service.
+
+   ```bash
+    ansible-galaxy role init debian
+   ```
