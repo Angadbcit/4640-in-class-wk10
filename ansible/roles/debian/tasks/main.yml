@@ -25,7 +25,7 @@
 # Enable nginx configuration by creating a symlink
 - name: enable nginx configuration
   ansible.builtin.file:
-    src: /etc/nginx/sites-available/default
+    src: files/default.conf
     dest: /etc/nginx/sites-enabled/default
     state: link
   # when: "'server_role_frontend_server' in group_names and ansible_facts['distribution'] == 'Debian'"
