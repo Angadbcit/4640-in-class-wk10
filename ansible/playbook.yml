@@ -1,24 +1,6 @@
 - name: Setup Redis and Frontend Servers
-  hosts:
-    - server_role_redis_server
-    - server_role_frontend_server
   become: true
   gather_facts: yes # Collect facts only once for the entire play
-
-  vars:
-    # Set remote_user conditionally for each server role
-    ansible_user: "{{ 'rocky' if 'server_role_redis_server' in group_names else 'admin' }}"
-  tasks:
-    # Tasks for Redis Servers
-    - name: Install redis on Rocky Linux
-      ansible.builtin.dnf:
-        name: redis
-        state: present
-      when: "'server_role_redis_server' in group_names and ansible_facts['distribution'] == 'Rocky'"
-    # Tasks for Frontend Servers
-    - name: Install nginx on Debian
-      ansible.builtin.apt:
-        name: nginx
-        state: present
-        update_cache: yes
-      when: "'server_role_frontend_server' in group_names and ansible_facts['distribution'] == 'Debian'"
+  roles:
+    - debian
+    - rocky
